@@ -1,0 +1,51 @@
+Naive Bayes Classifer for polarity in movie review  dataset
+
+Overview
+********
+
+This is a file explaining how to execute the Sentiment_Analysis_Naive_Bayes.R code in RStudio with the data set file poarity_review with 1000 positive reviews and 1000 negative reviews. 
+
+
+Files:
+Sentiment_Analysis_Naive_Bayes.R
+
+Dataset Files:
+
+There is one top-level directory [txt_sentoken/] 
+and it contains [pos/, neg/]corresponding to the training and test sets. 
+
+Procedure:
+
+DATA PROCESSING
+1.	Import necessary packages, set directory and load the text files unto the R environment using readtext() function.
+2.	Create class label type for positive and negative reviews, combine the data into one data frame and randomize the columns.
+3.	Consolidate the text files into single corpus.
+4.	Perform data cleaning techniques to make the corpus useful for sentiment analysis.
+a.	Convert to lowercase.
+b.	Remove numbers.
+c.	Remove Stopwords.
+d.	Remove punctuations.
+e.	Convert words to root form (stemming).
+f.	Strip white space.
+5.	Transform the data to DocumentTermMatrix form.
+TRAINING THE MODEL
+6.	Split and create training (75% - 1500 reviews) and testing data (25% - 500 reviews).
+7.	Create labels for positive and negative reviews for validation.
+8.	Perform frequent word search and indicate the features for training the model.
+9.	Build the Naïve Bayes Classifier model for the training data.
+EVALUATION
+10.	Use the classifier model to predict the polarity in the testing data and obtain CrossTable.
+PERFORMANCE IMPROVEMENT
+11.	Change the Stopwords to include more words along with the default set.
+12.	Change the frequency of the indicator features for better training.
+13.	Apply the Laplace estimator and compare the results before and after Laplace smoothing.
+
+Contact:
+
+For questions/comments/corrections please contact 
+Poorani Jagadeesan 
+pjagadee@fitchburgstate.edu
+Thanate Banchonhattakij
+tbanchon@student.fitchburgstate.edu
+Yashwanth Gangapuram
+ygangapu@student.fitchburgstate.edu

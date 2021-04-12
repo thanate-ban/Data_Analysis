@@ -1,0 +1,41 @@
+Naive Bayes Classifer for polarity in movie review  dataset
+
+Overview
+********
+
+This is a file explaining how to execute the Sentiment_Analysis_Rule_Based.R code in RStudio with the data set file poarity_review with 1000 positive reviews and 1000 negative reviews. 
+
+
+Files:
+
+Sentiment_Analysis_Rule_Based.R
+
+Dataset Files:
+
+polarity_review
+
+There is one top-level directory [txt_sentoken/] 
+and it contains [pos/, neg/]corresponding to the training and test sets. 
+
+Procedure:
+
+DATA PROCESSING
+1.	Import necessary packages, set directory and load the text files unto the R environment using readtext() function. 
+2. 	Gather the positive and negative movie review data files into one-token-per-row using the unnest_tokens() function for converting the data frame into a text column.
+2.	Combine the positive and negative review tibbles into a single object using rbind() function.
+TRAINING THE MODEL – NRC, BING
+3.	Filter the sentiments (each word representing a particular emotion as expressed in the lexicon) from the movie review tibble.
+4.	Join them to the ‘nrc’ lexicon using ‘right_join’ and count the frequency of each sentiment occurring across the reviews.
+5.	Join them to the ‘bing’ lexicon using ‘inner_join’ and count the frequency of each sentiment occurring across the reviews.
+PERFORMANCE IMPROVEMENT
+6.	Compare the positive and negative sentiments and generate plots to gauge the overall emotions in the movie reviews.
+
+Contact:
+
+For questions/comments/corrections please contact 
+Poorani Jagadeesan 
+pjagadee@fitchburgstate.edu
+Thanate Banchonhattakij
+tbanchon@student.fitchburgstate.edu
+Yashwanth Gangapuram
+ygangapu@student.fitchburgstate.edu
